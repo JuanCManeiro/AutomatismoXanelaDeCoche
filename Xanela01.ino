@@ -1,11 +1,19 @@
 # AutomatismoXanelaDeCoche
 Xanela de coche con 2 motores
 
-/*
-Programa para simular a funcion dunha xanela de automovil 
-de maneira simplificada. O motor acciona o motor se subida 
-ao ser premido, Unha segunda pulsacion fai que se accione
-o motor de baixada. o motor sube durante 7 sg despois pode baixar tamen 7sg 
+/****
+CORREXIR CAMBIOS E COMPROVAR QUE DURE 7 SG
+                    Programa para simular o funcionamento 
+                          dunha xanela de automovil 
+                           de maneira simplificada.
+    Nun principio se a xanela esta aberta, e recibe un impulso, ben sexa encender 
+     o coche ou cerrar as portas por ex, o motor de subida ponse en funcionamento ata esta pechada.
+     noutra banda, un pulsador acciona o motor se subida ao ser premido, Unha segunda pulsación fai que se accione
+      o motor de baixada. O motor sube durante 7 sg despois pode baixar tamen 7sg. 
+       Ademáis de todo isto o sentido da xanela pode cambiar en calquera momento 
+        premendo o pulsador.
+         Teremos 2 saidas dixitais para os motores( pin 11 e 12 a relé ) e unha entrada dixital para o pulsador (pin 7).
+
 
 Entrada: Pulsador (dixital)
 Saídas:  Relé (2xdixital)
@@ -14,7 +22,8 @@ Autor:..... Comunidade
 Data: Febreiro'23
 
 Sempre despois de cada orde hay que poñer ; non telo da erro
-*/
+
+          ****/
 
 #define motorArriba 11 // no levan igual nin levan punto e coma
 #define motorAbaixo 12
@@ -26,14 +35,14 @@ Sempre despois de cada orde hay que poñer ; non telo da erro
 int estado = 0;
 int contador = 100; // contador de sinais ao motor
 
-/// adicion int pulsador = 0;
+// adicion int pulsador = 0;
 
 void setup() {
   pinMode(motorArriba, OUTPUT);// pinMode e digitalMode ven sendo o mesmo so diferentes modos de nomear "sinónimos"
   pinMode(motorAbaixo, OUTPUT);
   pinMode(pulsador, INPUT);
   
-  Serial.begin(9600); //poñemos o monitor seri en funcionamento
+  Serial.begin(9600); //poñemos o monitor serie en funcionamento
 
   // int estado; //con "bool" no sitio de "int" funciona igual COMPROVAR MAIS ADIANTE
     
@@ -76,7 +85,7 @@ void loop() {
       delay(100);
 }
   //fin de accionamento de motores, por que?, cando pase o tempo non podemos volver a activar?
-delay(5); // con este delay final conseguimos que o contador vaia mais lento e asi danos tempo de ver o proceso e poder usar o pulsador
+delay(5); // con este delay final conseguimos que o contador vaia mais lento ou máis rápido e así danos tempo de ver o proceso e poder usar o pulsador con máis calma
 }
 
 
