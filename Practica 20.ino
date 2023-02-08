@@ -1,5 +1,6 @@
 # AutomatismoXanelaDeCoche
 Xanela de coche con 2 motores
+
 /*
 Programa para simular a funcion dunha xanela de automovil 
 de maneira simplificada. O motor acciona o motor se subida 
@@ -71,7 +72,7 @@ void loop() {
   else {      //senon esta accionado lee 10 veces por sg
       digitalWrite(motorArriba, LOW); // aqui si introducindo aqui os dous motores en baixa o chegar o contador a 0 os motores deteñense,
       digitalWrite(motorAbaixo, LOW);
-      Serial.print("xanela parada"); 
+      Serial.print("  | xanela parada |  "); 
       delay(100);
 }
   //fin de accionamento de motores, por que?, cando pase o tempo non podemos volver a activar?
