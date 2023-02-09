@@ -2,7 +2,7 @@
 Xanela de coche con 2 motores
 
 /****
-CORREXIR CAMBIOS E COMPROVAR QUE DURE 7 SG
+CORREXIR CAMBIOS E COMPROVAR QUE DURE 7 SG, feito.
                     Programa para simular o funcionamento 
                           dunha xanela de automovil 
                            de maneira simplificada.
@@ -68,13 +68,13 @@ void loop() {
     if(estado == 0) {
       digitalWrite(motorArriba, HIGH);
       digitalWrite(motorAbaixo, LOW);
-      delay(50); // usamos un numero pequeno para que de tempo a pulsacion asi lee cada 50 msg
+      delay(70); // usamos un numero pequeno para que de tempo a pulsacion asi lee cada 50 msg
       contador --;  //- 1; non me funcionou o -1 xq?
     }
     else {
       digitalWrite(motorArriba, LOW);
       digitalWrite(motorAbaixo, HIGH);
-      delay(50); 
+      delay(70); 
       contador --; //-- é igual a -1
       }
 }
